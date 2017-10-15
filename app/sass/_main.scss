@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'fira_sans';
+    src: url('../fonts/firasans-bold-webfont.woff2') format('woff2'), url('../fonts/firasans-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sans';
+    src: url('../fonts/firasans-light-webfont.woff2') format('woff2'), url('../fonts/firasans-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sans';
+    src: url('../fonts/firasans-medium-webfont.woff2') format('woff2'), url('../fonts/firasans-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fira_sans';
+    src: url('../fonts/firasans-regular-webfont.woff2') format('woff2'), url('../fonts/firasans-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: 16px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+p {
+    margin: 0;
+    letter-spacing: -0.1px;
+}
+
+html,
+body {
+    font-family: "fira_sans";
+    font-weight: 400;
+    font-style: normal;
+    height: 100%;
+    width: 100%;
+    background-color: $main-bg-color;
+}
+
+.wrapper {
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    @include laptop {
+        width: 992px;
+    }
+    @include tablet {
+        width: 768px;
+    }
+    @include mobile {
+        width: 320px;
+    }
+}

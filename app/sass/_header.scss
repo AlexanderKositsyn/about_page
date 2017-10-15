@@ -1,0 +1,71 @@
+.header {
+    margin-bottom: 24px;
+    background-color: $header-bg-color;
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 10px 130px 10px 130px;
+        @include mobile {
+            padding: 10px 0px 10px 0px;
+        }
+    }
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    &__pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+    }
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &__full-name {
+        color: $footer-bg-color;
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+    }
+}
+
+.contacts {
+    text-decoration: none;
+    display: block;
+    color: $active-color;
+    font-family: "Fira_Sans";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-left: auto; // border-bottom: 1px dotted $active-color;
+    background-image: linear-gradient(to right, $active-color 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 5px 1px;
+    background-repeat: repeat-x;
+    transition: all .3s;
+    &:hover {
+        color: $contact-hover-color;
+        border-color: $contact-hover-color;
+    }
+    @include tablet {
+        display: none;
+    }
+}
+
+.phone {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: auto;
+    &__icon {
+        display: none;
+        font-size: 32px;
+        @include tablet {
+            display: inline;
+            color: $active-color;
+        }
+    }
+}

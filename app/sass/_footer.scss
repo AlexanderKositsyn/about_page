@@ -1,0 +1,55 @@
+.footer {
+    background-color: $footer-bg-color;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 10px 130px 10px 130px;
+        @include mobile {
+            padding: 10px 0px 10px 0px;
+        }
+    }
+}
+
+@each $social in (fb, vk, tw) {
+    .socials__item--#{$social} {
+        background: url('../img/#{$social}.png') center center no-repeat;
+        &:hover {
+            background: url('../img/#{$social}-hover.png') center center no-repeat;
+        }
+    }
+}
+
+.copyright {
+    color: $footer-text-color;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+    @include mobile {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    &__item {
+        margin-right: 4px;
+        border-radius: 50%;
+        width: 34px;
+        height: 33px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        display: block;
+        height: 100%;
+    }
+    @include mobile {
+        flex: 0 0 100%;
+        justify-content: center;
+    }
+}
