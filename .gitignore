@@ -1,0 +1,7 @@
+node_modules
+app/bower
+.sass-cache
+.bowerrc
+
+gulpfile.js
+.idea
