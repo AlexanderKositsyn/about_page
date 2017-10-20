@@ -1,0 +1,75 @@
+.main--portfolio {
+    margin-left: 10px;
+}
+
+.title-portfolio {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 1.29;
+    color: $greyish-brown;
+    margin-bottom: 23px;
+    @include tablet {
+        text-align: center;
+    }
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: -20px;
+    &__item {
+        width: 220px;
+        margin-left: 10px;
+        margin-top: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        @include mobile {
+            flex: 0 0 100%;
+        }
+    }
+    &__top {
+        height: 172px;
+        overflow: hidden;
+        @include mobile {
+            height: 234px;
+        }
+    }
+    &__img {
+        width: 100%;
+        max-width: 100%;
+    }
+    &__bottom {
+        padding-top: 20px;
+        padding-left: 19px;
+        padding-right: 30px;
+        padding-bottom: 17px;
+        background-color: $white;
+    }
+    &__title {
+        font-size: 21px;
+        line-height: 1.14;
+        color: $dark-sky-blue;
+        text-decoration: none;
+        &:hover {
+            color: $button-color;
+        }
+    }
+    &__desc {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: $greyish-brown;
+    }
+    &__app-type {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.71;
+        color: #aeaeae;
+    }
+    &__icon {
+        font-size: 18px;
+        line-height: 1.33;
+        margin-right: 8px;
+    }
+}

@@ -34,6 +34,7 @@
 }
 
 .contacts {
+    position: relative;
     text-decoration: none;
     display: block;
     color: $active-color;
@@ -50,6 +51,77 @@
     &:hover {
         color: $contact-hover-color;
         border-color: $contact-hover-color;
+    }
+    &:hover &__popup {
+        display: block;
+    }
+    &:after {
+        content: '';
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        left: 0;
+    }
+    &__popup {
+        display: none;
+        border-radius: 10px;
+        background-color: $white;
+        border: solid 1px #dedede;
+        position: absolute;
+        top: 134%;
+        left: -26%;
+        padding: 20px 20px 13px 20px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.56;
+        color: $greyish-brown;
+        &:after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 12px solid #fff;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 12px solid #dedede;
+        }
+    }
+    &__email {
+        display: block;
+        text-decoration: none;
+        color: $greyish-brown;
+        white-space: nowrap;
+    }
+    &__phone {
+        display: block;
+        text-decoration: none;
+        color: $greyish-brown;
+        white-space: nowrap;
+    }
+    &__messager {
+        display: block;
+        text-decoration: none;
+        color: $greyish-brown;
+        white-space: nowrap;
+    }
+    &__icon {
+        color: #33bfe2;
+        margin-right: 5px;
     }
     @include tablet {
         display: none;

@@ -5,6 +5,9 @@
         flex-wrap: wrap;
         align-items: center;
         padding: 10px 130px 10px 130px;
+        @include tablet {
+            flex-direction: column;
+        }
         @include mobile {
             padding: 10px 0px 10px 0px;
         }
@@ -47,6 +50,9 @@
     &__link {
         display: block;
         height: 100%;
+    }
+    @include tablet {
+        margin: 0 auto;
     }
     @include mobile {
         flex: 0 0 100%;

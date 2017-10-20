@@ -30,6 +30,15 @@
         padding: 19px 81px 19px 81px;
         background-color: $dark-sky-blue;
     }
+    @include laptop {
+        width: 364px;
+    }
+    @include tablet {
+        width: 355px;
+    }
+    @include mobile {
+        width: 300px;
+    }
 }
 
 .picture {
@@ -65,6 +74,7 @@
     text-align: center;
     color: $white;
     transition: all 0.3s;
+    margin: 0 auto;
     &:hover {
         color: $dark-sky-blue;
         background-color: $white;
